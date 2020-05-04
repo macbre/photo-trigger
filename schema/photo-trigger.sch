@@ -1,0 +1,302 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 5513 4764
+encoding utf-8
+Sheet 1 1
+Title "Photo Trigger"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20PU U?
+U 1 1 5EAF56C5
+P 2100 1900
+F 0 "U?" H 1571 1946 50  0000 R CNN
+F 1 "ATtiny85-20PU" H 1571 1855 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2100 1900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 2100 1900 50  0001 C CNN
+	1    2100 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J?
+U 1 1 5EAF84F8
+P 4300 900
+F 0 "J?" H 4120 883 50  0000 R CNN
+F 1 "AudioJack2" H 4120 974 50  0000 R CNN
+F 2 "" H 4300 900 50  0001 C CNN
+F 3 "~" H 4300 900 50  0001 C CNN
+	1    4300 900 
+	-1   0    0    1   
+$EndComp
+Text Label 4000 850  2    50   ~ 0
+tip
+Text Label 4150 1100 2    50   ~ 0
+sleeve
+Wire Wire Line
+	3850 900  3850 650 
+Wire Wire Line
+	3850 650  3350 650 
+Wire Wire Line
+	3350 650  3350 750 
+Wire Wire Line
+	3850 900  4100 900 
+Wire Wire Line
+	3350 1150 3350 1250
+Wire Wire Line
+	3350 1250 3850 1250
+Wire Wire Line
+	3850 1250 3850 1000
+Wire Wire Line
+	3850 1000 4100 1000
+Wire Wire Line
+	2950 950  3050 950 
+Text Label 3050 900  2    50   ~ 0
+trigger
+$Comp
+L power:GND #PWR?
+U 1 1 5EB0DE9A
+P 2100 2650
+F 0 "#PWR?" H 2100 2400 50  0001 C CNN
+F 1 "GND" H 2105 2477 50  0000 C CNN
+F 2 "" H 2100 2650 50  0001 C CNN
+F 3 "" H 2100 2650 50  0001 C CNN
+	1    2100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EB0E8DD
+P 2100 1150
+F 0 "#PWR?" H 2100 1000 50  0001 C CNN
+F 1 "VCC" H 2117 1323 50  0000 C CNN
+F 2 "" H 2100 1150 50  0001 C CNN
+F 3 "" H 2100 1150 50  0001 C CNN
+	1    2100 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1150 2100 1300
+Wire Wire Line
+	2100 2500 2100 2650
+$Comp
+L Device:R R1
+U 1 1 5EB10088
+P 2950 1250
+F 0 "R1" V 2743 1250 50  0000 C CNN
+F 1 "10k" V 2834 1250 50  0000 C CNN
+F 2 "" V 2880 1250 50  0001 C CNN
+F 3 "~" H 2950 1250 50  0001 C CNN
+	1    2950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW
+U 1 1 5EB13786
+P 3400 2200
+F 0 "SW" V 3354 2348 50  0000 L CNN
+F 1 "External" V 3445 2348 50  0000 L CNN
+F 2 "" H 3400 2400 50  0001 C CNN
+F 3 "~" H 3400 2400 50  0001 C CNN
+	1    3400 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EB140B5
+P 3050 2200
+F 0 "C?" H 3165 2246 50  0000 L CNN
+F 1 "100n" H 3165 2155 50  0000 L CNN
+F 2 "" H 3088 2050 50  0001 C CNN
+F 3 "~" H 3050 2200 50  0001 C CNN
+	1    3050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2350 3050 2500
+Wire Wire Line
+	3050 2500 3400 2500
+Wire Wire Line
+	3400 2500 3400 2400
+$Comp
+L power:GND #PWR?
+U 1 1 5EB14DAC
+P 3600 2500
+F 0 "#PWR?" H 3600 2250 50  0001 C CNN
+F 1 "GND" H 3605 2327 50  0000 C CNN
+F 2 "" H 3600 2500 50  0001 C CNN
+F 3 "" H 3600 2500 50  0001 C CNN
+	1    3600 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5EB19838
+P 3500 1700
+F 0 "D?" H 3493 1536 50  0001 C CNN
+F 1 "LED" H 3493 1536 50  0001 C CNN
+F 2 "" H 3500 1700 50  0001 C CNN
+F 3 "~" H 3500 1700 50  0001 C CNN
+	1    3500 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB1A75B
+P 3900 1700
+F 0 "#PWR?" H 3900 1450 50  0001 C CNN
+F 1 "GND" V 3905 1572 50  0000 R CNN
+F 2 "" H 3900 1700 50  0001 C CNN
+F 3 "" H 3900 1700 50  0001 C CNN
+	1    3900 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 1700 3900 1700
+$Comp
+L Device:LED D?
+U 1 1 5EB267BF
+P 3500 1550
+F 0 "D?" H 3493 1386 50  0001 C CNN
+F 1 "LED" H 3493 1386 50  0001 C CNN
+F 2 "" H 3500 1550 50  0001 C CNN
+F 3 "~" H 3500 1550 50  0001 C CNN
+	1    3500 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB267C9
+P 3900 1550
+F 0 "#PWR?" H 3900 1300 50  0001 C CNN
+F 1 "GND" V 3905 1422 50  0000 R CNN
+F 2 "" H 3900 1550 50  0001 C CNN
+F 3 "" H 3900 1550 50  0001 C CNN
+	1    3900 1550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 1550 3900 1550
+$Comp
+L Device:R R?
+U 1 1 5EB2CCCE
+P 3150 1700
+F 0 "R?" V 2943 1700 50  0001 C CNN
+F 1 "1k" V 3035 1700 50  0000 C CNN
+F 2 "" V 3080 1700 50  0001 C CNN
+F 3 "~" H 3150 1700 50  0001 C CNN
+	1    3150 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EB2DCFB
+P 3150 1550
+F 0 "R?" V 2943 1550 50  0001 C CNN
+F 1 "1k" V 3035 1550 50  0000 C CNN
+F 2 "" V 3080 1550 50  0001 C CNN
+F 3 "~" H 3150 1550 50  0001 C CNN
+	1    3150 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 1550 3000 1550
+Wire Wire Line
+	3300 1550 3350 1550
+$Comp
+L Device:LED D?
+U 1 1 5EB35051
+P 4000 1900
+F 0 "D?" H 3993 1736 50  0001 C CNN
+F 1 "LED" H 3993 1736 50  0001 C CNN
+F 2 "" H 4000 1900 50  0001 C CNN
+F 3 "~" H 4000 1900 50  0001 C CNN
+	1    4000 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EB35066
+P 3600 1900
+F 0 "R?" V 3393 1900 50  0001 C CNN
+F 1 "1k" V 3485 1900 50  0000 C CNN
+F 2 "" V 3530 1900 50  0001 C CNN
+F 3 "~" H 3600 1900 50  0001 C CNN
+	1    3600 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EB38D32
+P 4300 1900
+F 0 "#PWR?" H 4300 1750 50  0001 C CNN
+F 1 "VCC" V 4317 2028 50  0000 L CNN
+F 2 "" H 4300 1900 50  0001 C CNN
+F 3 "" H 4300 1900 50  0001 C CNN
+	1    4300 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 1900 3450 1900
+Wire Wire Line
+	3400 1900 3400 2000
+Wire Wire Line
+	3750 1900 3850 1900
+Wire Wire Line
+	4150 1900 4300 1900
+Wire Wire Line
+	3400 2500 3600 2500
+Connection ~ 3400 2500
+Connection ~ 3400 1900
+Wire Wire Line
+	3050 1900 3050 2050
+Wire Wire Line
+	3050 1900 3400 1900
+Wire Wire Line
+	2700 1900 3050 1900
+Connection ~ 3050 1900
+Wire Wire Line
+	3300 1700 3350 1700
+Wire Wire Line
+	2700 1700 3000 1700
+Wire Wire Line
+	2700 2000 2950 2000
+Wire Wire Line
+	2950 1550 2950 2000
+$Comp
+L Transistor_BJT:BC546 T1
+U 1 1 5EB64AE9
+P 3250 950
+F 0 "T1" H 3441 996 50  0000 L CNN
+F 1 "BC546" H 3441 905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3450 875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3250 950 50  0001 L CNN
+	1    3250 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1550 2950 1400
+Connection ~ 2950 1550
+Wire Wire Line
+	2950 1100 2950 950 
+$Comp
+L power:GND #PWR?
+U 1 1 5EB75B2C
+P 4000 1250
+F 0 "#PWR?" H 4000 1000 50  0001 C CNN
+F 1 "GND" V 4005 1122 50  0000 R CNN
+F 2 "" H 4000 1250 50  0001 C CNN
+F 3 "" H 4000 1250 50  0001 C CNN
+	1    4000 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3850 1250 4000 1250
+Connection ~ 3850 1250
+$EndSCHEMATC
